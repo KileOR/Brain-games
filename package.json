@@ -1,6 +1,6 @@
 {
   "name": "brain-games-hexlet-assanali",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This is a mini program with command line games. Project for study JS programming from Hexlet. First project.",
   "main": "",
   "bin": {
