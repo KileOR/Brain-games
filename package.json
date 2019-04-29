@@ -1,0 +1,44 @@
+{
+  "name": "brain-games-hexlet-assanali",
+  "version": "1.0.0",
+  "description": "This is a mini program with command line games. Project for study JS programming from Hexlet. First project.",
+  "main": "",
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KileOR/project-lvl1-s486.git"
+  },
+  "keywords": [
+    "brain-games",
+    "JS",
+    "study",
+    "Hexlet"
+  ],
+  "author": "Assanali Issatayev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KileOR/project-lvl1-s486/issues"
+  },
+  "homepage": "https://github.com/KileOR/project-lvl1-s486#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.4",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2"
+  },
+  "dependencies": {
+    "eslint": "^5.16.0"
+  }
+}
