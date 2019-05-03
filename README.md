@@ -4,3 +4,5 @@
 
 # Brain Games
 This is first (lvl 1) project from hexlet.io for study js programming. This is a mini CLI games.
+
+[![asciicast](https://asciinema.org/a/jB2Z40MuPmjk7tuQPu3RnHxgu.svg)](https://asciinema.org/a/jB2Z40MuPmjk7tuQPu3RnHxgu)
