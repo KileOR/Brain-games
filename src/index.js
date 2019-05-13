@@ -1,22 +1,16 @@
 import readlineSync from 'readline-sync';
 
-const diapayWelcomeMsg = () => {
-  console.log(`Welcome to the Brain Games!
-              Answer "yes" if number even otherwise answer "no".`);
-};
+export const getRandomInt = range => Math.floor(Math.random() * range + 1);
 
-const isEven = num => num % 2 === 0;
-
-export const askName = () => {
-  console.log('Welcome to the Brain Games!');
-
+const askName = () => {
   const userName = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${userName}`);
+
   return userName;
 };
 
-export const askIsEvenNumber = () => {
-  diapayWelcomeMsg();
+const startGame = (gameParams) => {
+  console.log(gameParams.welcomeMessage);
   const userName = askName();
 
   const iter = (name, acc) => {
@@ -25,16 +19,13 @@ export const askIsEvenNumber = () => {
       return;
     }
 
-    const askedNum = Math.floor(Math.random() * 21);
-    console.log(`Question: ${askedNum}`);
+    const question = gameParams.getQuestion();
+    console.log(`Question: ${question}`);
 
     const answer = readlineSync.question('Your answer: ');
-    const correct = isEven(askedNum) ? 'yes' : 'no';
+    const correct = gameParams.getCorrectAnswer(question);
 
-    if (isEven(askedNum) && answer === correct) {
-      console.log('Correct!');
-      iter(name, acc + 1);
-    } else if (!isEven(askedNum) && answer === correct) {
+    if (answer === correct) {
       console.log('Correct!');
       iter(name, acc + 1);
     } else {
@@ -45,3 +36,5 @@ export const askIsEvenNumber = () => {
 
   return iter(userName, 0);
 };
+
+export default startGame;

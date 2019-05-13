@@ -5,4 +5,16 @@
 # Brain Games
 This is first (lvl 1) project from hexlet.io for study js programming. This is a mini CLI games.
 
-[![asciicast](https://asciinema.org/a/jB2Z40MuPmjk7tuQPu3RnHxgu.svg)](https://asciinema.org/a/jB2Z40MuPmjk7tuQPu3RnHxgu)
+##Installation
+```
+npm install -g brain-games-hexlet-assanali
+```
+[![asciicast](https://asciinema.org/a/245838.svg)](https://asciinema.org/a/245838)
+
+## Even or not
+Answer "yes" if number even otherwise answer "no".
+[![asciicast](https://asciinema.org/a/Qs74T4GRr4or5RjilEdheXJzd.svg)](https://asciinema.org/a/Qs74T4GRr4or5RjilEdheXJzd)
+
+## Calculator
+Write correct result of expression
+[![asciicast](https://asciinema.org/a/zkaNdmzLSLEfcU3ooxbWnJW19.svg)](https://asciinema.org/a/zkaNdmzLSLEfcU3ooxbWnJW19)
