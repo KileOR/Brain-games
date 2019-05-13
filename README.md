@@ -18,3 +18,7 @@ Answer "yes" if number even otherwise answer "no".
 ## Calculator
 Write correct result of expression
 [![asciicast](https://asciinema.org/a/zkaNdmzLSLEfcU3ooxbWnJW19.svg)](https://asciinema.org/a/zkaNdmzLSLEfcU3ooxbWnJW19)
+
+## Greatest common devider
+Find the greatest common divisor of given numbers.
+[![asciicast](https://asciinema.org/a/dw6SIrPf4Gpgw8nBmYdPNBuzG.svg)](https://asciinema.org/a/dw6SIrPf4Gpgw8nBmYdPNBuzG)
