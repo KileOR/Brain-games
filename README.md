@@ -5,7 +5,7 @@
 # Brain Games
 This is first (lvl 1) project from hexlet.io for study js programming. This is a mini CLI games.
 
-##Installation
+## Installation
 ```
 npm install -g brain-games-hexlet-assanali
 ```
