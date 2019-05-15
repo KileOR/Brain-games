@@ -42,9 +42,6 @@ const getQuestionAnswerPair = () => {
 const brainCalcParams = {
   welcomeMessage: `Welcome to the Brain Games!
   What is the result of the expression?`,
-
-  getQuestion,
-  getCorrectAnswer,
   getQuestionAnswerPair,
 };
 

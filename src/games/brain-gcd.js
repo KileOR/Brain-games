@@ -33,9 +33,6 @@ const getQuestionAnswerPair = () => {
 const brainGcdParams = {
   welcomeMessage: `Welcome to the Brain Games!
   Find the greatest common divisor of given numbers.`,
-
-  getQuestion,
-  getCorrectAnswer,
   getQuestionAnswerPair,
 };
 

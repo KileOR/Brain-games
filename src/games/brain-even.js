@@ -16,9 +16,6 @@ const getQuestionAnswerPair = () => {
 const brainEvenParams = {
   welcomeMessage: `Welcome to the Brain Games!
   Answer "yes" if number even otherwise answer "no".`,
-
-  getQuestion,
-  getCorrectAnswer,
   getQuestionAnswerPair,
 };
 
