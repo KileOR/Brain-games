@@ -19,11 +19,13 @@ const startGame = (gameParams) => {
       return;
     }
 
-    const question = gameParams.getQuestion();
+    const answerQuestionPair = gameParams.getQuestionAnswerPair();
+
+    const question = answerQuestionPair[0];
     console.log(`Question: ${question}`);
 
     const answer = readlineSync.question('Your answer: ');
-    const correct = gameParams.getCorrectAnswer(question);
+    const correct = `${answerQuestionPair[1]}`;
 
     if (answer === correct) {
       console.log('Correct!');

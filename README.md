@@ -22,3 +22,7 @@ Write correct result of expression
 ## Greatest common devider
 Find the greatest common divisor of given numbers.
 [![asciicast](https://asciinema.org/a/dw6SIrPf4Gpgw8nBmYdPNBuzG.svg)](https://asciinema.org/a/dw6SIrPf4Gpgw8nBmYdPNBuzG)
+
+## Arithmetic progression
+What number is missing in the progression?
+[![asciicast](https://asciinema.org/a/9MqKAEGLyJqym8qJKgOCQK0ax.svg)](https://asciinema.org/a/9MqKAEGLyJqym8qJKgOCQK0ax)

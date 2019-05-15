@@ -32,12 +32,20 @@ const getCorrectAnswer = (question) => {
   return `${result}`;
 };
 
+const getQuestionAnswerPair = () => {
+  const question = getQuestion();
+  const answer = getCorrectAnswer(question);
+
+  return [question, answer];
+};
+
 const brainCalcParams = {
   welcomeMessage: `Welcome to the Brain Games!
   What is the result of the expression?`,
 
   getQuestion,
   getCorrectAnswer,
+  getQuestionAnswerPair,
 };
 
 export default brainCalcParams;

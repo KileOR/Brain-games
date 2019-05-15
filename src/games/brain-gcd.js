@@ -23,12 +23,20 @@ const getCorrectAnswer = (question) => {
   return findGcd(firstNumber, secondNumber);
 };
 
+const getQuestionAnswerPair = () => {
+  const question = getQuestion();
+  const answer = getCorrectAnswer(question);
+
+  return [question, answer];
+};
+
 const brainGcdParams = {
   welcomeMessage: `Welcome to the Brain Games!
   Find the greatest common divisor of given numbers.`,
 
   getQuestion,
   getCorrectAnswer,
+  getQuestionAnswerPair,
 };
 
 export default brainGcdParams;
