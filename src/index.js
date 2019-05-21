@@ -1,7 +1,5 @@
 import readlineSync from 'readline-sync';
 
-export const getRandomInt = range => Math.floor(Math.random() * range + 1);
-
 const askName = () => {
   const userName = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${userName}`);
@@ -14,7 +12,9 @@ const startGame = (gameParams) => {
   const userName = askName();
 
   const iter = (name, acc) => {
-    if (acc === 3) {
+    const numbersOfRounds = 3;
+
+    if (acc === numbersOfRounds) {
       console.log(`Congratulations, ${name}!`);
       return;
     }

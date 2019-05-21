@@ -1,6 +1,4 @@
 #!/usr/bin/env node
+import startGame from '../games/progression';
 
-import startGame from '..';
-import gameParams from '../games/brain-progression';
-
-startGame(gameParams);
+startGame();

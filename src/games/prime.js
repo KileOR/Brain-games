@@ -1,8 +1,9 @@
-import { getRandomInt } from '..';
+import getRandomInt from '../utils';
+import startGame from '..';
 
 const isPrime = (num) => {
-  if (num === 2) {
-    return true;
+  if (num < 2) {
+    return false;
   }
 
   for (let i = 2; i <= Math.sqrt(num); i += 1) {
@@ -14,10 +15,8 @@ const isPrime = (num) => {
   return true;
 };
 
-const getQuestion = () => getRandomInt(100);
-
 const getQuestionAnswerPair = () => {
-  const question = getQuestion();
+  const question = getRandomInt(0, 100);
   const answer = isPrime(question) ? 'yes' : 'no';
 
   return [question, answer];
@@ -29,4 +28,8 @@ const brainPrimeParams = {
   getQuestionAnswerPair,
 };
 
-export default brainPrimeParams;
+const startPrimeGame = () => {
+  startGame(brainPrimeParams);
+};
+
+export default startPrimeGame;
