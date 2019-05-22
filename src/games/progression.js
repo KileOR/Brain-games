@@ -1,8 +1,10 @@
 import getRandomInt from '../utils';
 import startGame from '..';
 
+const welcomeMessage = 'What number is missing in the progression?';
+const numbersInProgression = 10;
+
 const generateProgression = (start, step) => {
-  const numbersInProgression = 10;
   const progression = [];
 
   for (let i = 0; i < numbersInProgression; i += 1) {
@@ -17,7 +19,7 @@ const getQuestionAnswerPair = () => {
   const firstNumber = getRandomInt(0, 10);
   const progression = generateProgression(firstNumber, step);
   const hiddenElementIndex = getRandomInt(0, progression.length);
-  const answer = progression[hiddenElementIndex];
+  const answer = `${progression[hiddenElementIndex]}`;
 
   progression[hiddenElementIndex] = '..';
   const question = progression.join(' ');
@@ -25,14 +27,4 @@ const getQuestionAnswerPair = () => {
   return [question, answer];
 };
 
-const brainProgressionParams = {
-  welcomeMessage: `Welcome to the Brain Games!
-  What number is missing in the progression?`,
-  getQuestionAnswerPair,
-};
-
-const startProgressionGame = () => {
-  startGame(brainProgressionParams);
-};
-
-export default startProgressionGame;
+export default () => startGame(getQuestionAnswerPair, welcomeMessage);

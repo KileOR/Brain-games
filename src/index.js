@@ -7,36 +7,35 @@ const askName = () => {
   return userName;
 };
 
-const startGame = (gameParams) => {
-  console.log(gameParams.welcomeMessage);
+const startGame = (getQuestionAnswerPair, welcomeMessage) => {
+  console.log('Welcome to the Brain Games!');
+  console.log(welcomeMessage);
   const userName = askName();
 
-  const iter = (name, acc) => {
+  const iter = (roundCounter) => {
     const numbersOfRounds = 3;
 
-    if (acc === numbersOfRounds) {
-      console.log(`Congratulations, ${name}!`);
+    if (roundCounter === numbersOfRounds) {
+      console.log(`Congratulations, ${userName}!`);
       return;
     }
 
-    const answerQuestionPair = gameParams.getQuestionAnswerPair();
+    const answerQuestionPair = getQuestionAnswerPair();
 
-    const question = answerQuestionPair[0];
+    const [question, correct] = answerQuestionPair;
     console.log(`Question: ${question}`);
-
     const answer = readlineSync.question('Your answer: ');
-    const correct = `${answerQuestionPair[1]}`;
 
     if (answer === correct) {
       console.log('Correct!');
-      iter(name, acc + 1);
+      iter(roundCounter + 1);
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was ${correct}.
-        Let's try again, ${name}`);
+        Let's try again, ${userName}`);
     }
   };
 
-  return iter(userName, 0);
+  return iter(0);
 };
 
 export default startGame;

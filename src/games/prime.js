@@ -1,6 +1,8 @@
 import getRandomInt from '../utils';
 import startGame from '..';
 
+const welcomeMessage = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 const isPrime = (num) => {
   if (num < 2) {
     return false;
@@ -22,14 +24,4 @@ const getQuestionAnswerPair = () => {
   return [question, answer];
 };
 
-const brainPrimeParams = {
-  welcomeMessage: `Welcome to the Brain Games!
-  Answer "yes" if given number is prime. Otherwise answer "no".`,
-  getQuestionAnswerPair,
-};
-
-const startPrimeGame = () => {
-  startGame(brainPrimeParams);
-};
-
-export default startPrimeGame;
+export default () => startGame(getQuestionAnswerPair, welcomeMessage);

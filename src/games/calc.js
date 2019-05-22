@@ -1,6 +1,9 @@
 import getRandomInt from '../utils';
 import startGame from '..';
 
+const welcomeMessage = 'What is the result of the expression?';
+const mathSymbols = ['+', '-', '*'];
+
 const calculate = (firstNumber, secondNumber, symbol) => {
   let result;
 
@@ -24,22 +27,12 @@ const calculate = (firstNumber, secondNumber, symbol) => {
 const getQuestionAnswerPair = () => {
   const firstNumber = getRandomInt(1, 10);
   const secondNumber = getRandomInt(1, 10);
-  const mathSymbols = ['+', '-', '*'];
-  const questionMathSymbol = mathSymbols[getRandomInt(0, 3)];
+  const selectedSymbolIndex = getRandomInt(0, mathSymbols.length - 1);
+  const questionMathSymbol = mathSymbols[selectedSymbolIndex];
   const question = `${firstNumber} ${questionMathSymbol} ${secondNumber}`;
-  const answer = calculate(firstNumber, secondNumber, questionMathSymbol);
+  const answer = `${calculate(firstNumber, secondNumber, questionMathSymbol)}`;
 
   return [question, answer];
 };
 
-const brainCalcParams = {
-  welcomeMessage: `Welcome to the Brain Games!
-  What is the result of the expression?`,
-  getQuestionAnswerPair,
-};
-
-const startCalcGame = () => {
-  startGame(brainCalcParams);
-};
-
-export default startCalcGame;
+export default () => startGame(getQuestionAnswerPair, welcomeMessage);

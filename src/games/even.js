@@ -1,6 +1,8 @@
 import getRandomInt from '../utils';
 import startGame from '..';
 
+const welcomeMessage = 'Answer "yes" if number even otherwise answer "no".';
+
 const isEven = num => num % 2 === 0;
 
 const getQuestionAnswerPair = () => {
@@ -10,14 +12,4 @@ const getQuestionAnswerPair = () => {
   return [question, answer];
 };
 
-const brainEvenParams = {
-  welcomeMessage: `Welcome to the Brain Games!
-  Answer "yes" if number even otherwise answer "no".`,
-  getQuestionAnswerPair,
-};
-
-const startEvenGame = () => {
-  startGame(brainEvenParams);
-};
-
-export default startEvenGame;
+export default () => startGame(getQuestionAnswerPair, welcomeMessage);
