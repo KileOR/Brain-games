@@ -1,7 +1,7 @@
 import getRandomInt from '../utils';
 import startGame from '..';
 
-const welcomeMessage = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 const mathSymbols = ['+', '-', '*'];
 
 const calculate = (firstNumber, secondNumber, symbol) => {
@@ -35,4 +35,4 @@ const getQuestionAnswerPair = () => {
   return [question, answer];
 };
 
-export default () => startGame(getQuestionAnswerPair, welcomeMessage);
+export default () => startGame(getQuestionAnswerPair, description);

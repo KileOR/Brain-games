@@ -1,7 +1,7 @@
 import getRandomInt from '../utils';
 import startGame from '..';
 
-const welcomeMessage = 'Answer "yes" if number even otherwise answer "no".';
+const description = 'Answer "yes" if number even otherwise answer "no".';
 
 const isEven = num => num % 2 === 0;
 
@@ -12,4 +12,4 @@ const getQuestionAnswerPair = () => {
   return [question, answer];
 };
 
-export default () => startGame(getQuestionAnswerPair, welcomeMessage);
+export default () => startGame(getQuestionAnswerPair, description);

@@ -1,7 +1,7 @@
 import getRandomInt from '../utils';
 import startGame from '..';
 
-const welcomeMessage = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 const numbersInProgression = 10;
 
 const generateProgression = (start, step) => {
@@ -27,4 +27,4 @@ const getQuestionAnswerPair = () => {
   return [question, answer];
 };
 
-export default () => startGame(getQuestionAnswerPair, welcomeMessage);
+export default () => startGame(getQuestionAnswerPair, description);
